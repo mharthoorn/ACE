@@ -11,7 +11,7 @@ It works with full look ahead. So it's not the fastest compiler. But it allows f
 It has a lexer, parser, AST, a .NET binary producer and a .NET type checking system for expression parsing. 
 
 ### Builder
-It has a basic system to build binaries.
+It has a basic system to build binaries that works recursive and event driven.
 
 ### Example language
 An language project "Moksi" is included as example.
