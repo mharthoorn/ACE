@@ -5,6 +5,22 @@ ACE. An Abstract Compiler Engine with which you can define a language with littl
 
 ### Language defininitions
 You can define a language in code in a BNF'ish format. 
+```csharp
+            method
+                .Sequence(decltype, identifier, "(", paramdecls, ")", braces)
+                .Build(build.Method);
+
+            paramdecls
+                .Interlace(paramdecl, ",");
+
+            paramdecl
+                .Sequence(decltype, identifier)
+                .Build(build.ParamDecl);
+
+            repeat
+                .Sequence("repeat", "(", expression, ")", block)
+                .Build(build.Repeat);
+```
 It works with full look ahead. So it's not the fastest compiler. But it allows for virtually unlimited language complexity.
 
 ### Components
